@@ -1,0 +1,469 @@
+
+<!DOCTYPE html>
+{% load staticfiles %}
+
+<html>
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+	<!-- Font-->
+	<link rel="stylesheet" type="text/css" href="{% static 'school_data/register/css/opensans-font.css' %}"/>
+	<link rel="stylesheet" type="text/css" href="{% static 'school_data/register/fonts/material-design-iconic-font/css/material-design-iconic-font.min.css' %}"/>
+	<!-- Main Style Css -->
+    <link rel="stylesheet" href="{% static 'school_data/register/css/style.css' %}"/>
+   
+
+</head>
+<body>
+	<div class="page-content">
+		<div class="form-v1-content">
+			<div class="wizard-form">
+		        <form class="form-register" enctype="multipart/form-data" method="POST">
+		        	<div id="form-total">
+		        		<!-- SECTION 1 -->
+			            <h2>
+			            	<p class="step-icon"><span>01</span></p>
+			            	<span class="step-text">School Information</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">School Information</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your website.  </p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>{{ profile_form.name.label_tag }}</legend>
+											{{ profile_form.name }}
+											<!-- <input type="text" class="form-control" id="first-name" name="first-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>{{ user_form.username.label_tag }}</legend>
+											{{ user_form.username }}
+											<!-- <input type="text" class="form-control" id="user-name" name="user-name" placeholder="User Name" required> --> <!----input id, name can be changed according to backend requirement----->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>{{ user_form.email.label_tag }}</legend>
+											{{ user_form.email }}
+											<!-- <input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Password</legend>
+											{{ user_form.password }}
+											<!-- <input type="text" name="your_email" id="your_email" class="form-control" pattern="[^@]+@[^@]+.[a-zA-Z]{2,6}" placeholder="example@email.com" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>{{ profile_form.address.label_tag }}</legend>
+											{{ profile_form.address }}
+											<!-- <input type="text" class="form-control" id="address" name="address" placeholder="xyz city" required> -->
+										</fieldset>
+
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>{{ profile_form.website.label_tag }}</legend>
+											{{ profile_form.website }}
+											<!-- <input type="text" class="form-control" id="website" name="website" placeholder="www.example.com" required> -->
+										</fieldset>
+										</div>
+										<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>{{ profile_form.phone_no.label_tag }}</legend>
+											{{ profile_form.phone_no }}
+											<!-- <input type="text" class="form-control" id="phone" name="phone" placeholder="0320-1234567" required> -->
+										</fieldset>
+										</div>
+
+			            </section>
+
+
+						<!---------------school info end------------------------->
+
+						<!-----------Description start-------------------------------->
+                            <h2>
+			            	<p class="step-icon"><span>02</span></p>
+			            	<span class="step-text">School Description</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">School Description</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your website.  </p>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										
+											<legend>Description</legend>
+
+											<div class="discription">
+											{{ profile_form.description }}
+											<!-- <textarea class="area" maxlength="400" placeholder="Description is not more than 400 characters"></textarea> --></div>
+										
+									</div>
+									</section>
+
+							<!---------------Description end-------------------------->
+
+								<!------------------------------------------Faculty Section---------------------------------->
+			            <h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">Faculty</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Faculty Members</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your accounts.</p>
+								</div>
+							<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac1_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac1_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac1_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac1_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required>
+										</fieldset> -->
+									</div>
+								</div>
+								<hr>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac2_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac2_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac2_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac2_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<hr>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac3_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac3_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac3_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac3_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<hr>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac4_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac4_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac4_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac4_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<hr>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac5_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac5_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac5_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac5_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<hr>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Name</legend>
+											{{ profile_form.fac6_name }}
+											<!-- <input type="text" class="form-control" id="t-name" name="t-name" placeholder="Name" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Qualification</legend>
+											{{ profile_form.fac6_qlf }}
+											<!-- <input type="text" class="form-control" id="qualification" name="qualification" placeholder="Qualification" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder">
+										<fieldset>
+											<legend>Designation</legend>
+											{{ profile_form.fac6_dsg }}
+											<!-- <input type="text" class="form-control" id="designation" name="designation" placeholder="Designation" required> -->
+										</fieldset>
+									</div>
+									<div class="form-holder">
+										<fieldset>
+											<legend>Picture</legend>
+											{{ profile_form.fac6_prlf }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+							</div>
+
+			            </section>
+
+<!-------------------------------------------------Faculty section end------------------------------------------------------->
+
+<!--------------------------------------------------School Details Start------------------------------------------------------------->
+			            <h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">School Details</span>
+			            </h2>
+						<section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">School Information</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your website.  </p>
+								</div>
+								
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Featured images</legend>
+											{{ profile_form.sch_featured_img1 }}
+											{{ profile_form.sch_featured_img2 }}
+											{{ profile_form.sch_featured_img3 }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required>
+											<input type="file" class="form-control" id="image" name="image" required>
+											<input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										
+											<legend>Educational Services</legend>
+											<div class="input-group">
+											{{ profile_form.edu_services }}
+<!-- 											<select name="subject">
+                                            <option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Primary</option>
+                                            <option>Middle</option>
+                                            <option>High</option>
+                                            <option>FA/FSC</option>
+                                            <option>BS/BSC/MSC</option>
+
+                                        </select> -->
+                                    </div>
+
+								
+
+									</div>
+								</div>
+								<div class="form-row">
+									<div class="form-holder form-holder-2">
+										
+											<legend>Achievments</legend>
+											<div class="input-group">
+											{{ profile_form.edu_awards }}
+
+											<!-- <select name="subject"> -->
+											<!--<option disabled="disabled" selected="selected">Choose option</option>
+                                            <option>Top 10 position in Board</option>
+                                            <option>Top 20 position in Board</option>
+                                            <option>Top 30 position in Board</option>
+                                            <option>Ranked in top 10 Schools of Dist</option>
+                                            <option>Other/option>< -->
+
+                                        </select>
+                                    </div>
+                                </div>
+										<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Logo</legend>
+											{{ profile_form.school_logo }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+										</div>
+									</div>
+</section>
+
+
+
+<!-------------------------------------School Details end---------------------------------------------------------->
+
+<!------------------------------------------- Principal Message -------------------------------------------------->
+			            <h2>
+			            	<p class="step-icon"><span>03</span></p>
+			            	<span class="step-text">Pricipal Message</span>
+			            </h2>
+			            <section>
+			                <div class="inner">
+			                	<div class="wizard-header">
+									<h3 class="heading">Pricipal Message</h3>
+									<p>Please enter your infomation and proceed to the next step so we can build your accounts.</p>
+								</div>
+							
+							<div class="form-row">
+									<div class="form-holder form-holder-2">
+										<fieldset>
+											<legend>Pricipal Image</legend>
+											{{ profile_form.principal_image }}
+											<!-- <input type="file" class="form-control" id="image" name="image" required> -->
+										</fieldset>
+									</div>
+								</div>
+						<div class="discription">
+						{{ profile_form.principal_message }}
+						<!-- <textarea class="area" maxlength="400" placeholder=" Type Pricipal Message Here"></textarea> -->
+						</div>
+						{% csrf_token %}
+						<input type="submit" value="Submit &#x2714;" class="btn btn-primary">
+						 <!----Maximum characters in description will be 400 , it can be increase/decrease--------------->
+						</div>
+					</div>
+				</div>
+			</div>
+		
+								
+
+							<!-- <input type="submit" value="Submit"> -->
+			</div>
+		</div>
+								
+			            </section>
+		        	</div>
+		        </form>
+			</div>
+		</div>
+	</div>
+	<script src="{% static 'school_data/register/js/jquery-3.3.1.min.js' %}"></script>
+	<script src="{% static 'school_data/register/js/jquery.steps.js' %}"></script>
+	<script src="{% static 'school_data/register/js/main.js' %}"></script>
+
+</body>
+</html>

@@ -1,0 +1,21 @@
+{% extends 'schools_website/base.html' %}
+{% block body_block %}
+
+<div class='jumbotron' style="text-align: center;">
+	<h1>Please Login</h1>
+	<form method = 'post'>
+	{% csrf_token %}
+	<label for='username'>Username:</label>
+	{{ login_form.user_name }}
+	<!-- <input type="text" placeholder="Enter UserNmae" name=""> -->
+	<label for='Password'>Password:</label>
+	{{ login_form.password }}
+
+	<!-- <input type="password" name="password"> -->
+	<input type="submit" value="Login" name="">
+	</form>
+
+{% endblock %}
+</div>
+
+

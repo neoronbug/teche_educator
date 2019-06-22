@@ -1,0 +1,15 @@
+{% extends 'schools_website/base.html' %}
+{% block body_block %}
+
+<div class = 'jumbotron'>
+<h1> School App level 1</h1>
+
+<form class="form-register" enctype="multipart/form-data" method="POST">
+<p> {{ form_ }} </p>
+
+{% csrf_token %}
+<input type="submit" value="Submit &#x2714;" class="btn btn-primary">
+</form> 
+
+</div>
+{% endblock %}

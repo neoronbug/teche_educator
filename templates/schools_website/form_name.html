@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<title>Registration Form</title>
+
+</head>
+<body>
+	<div class='container'>
+		<h1> This is Form </h1>
+		<form method="POST">
+		{{ form1.name.label_tag }}
+		{{ form1.name }}
+		{{ form1.email.label_tag }}
+		{{ form1.email }}
+		{{ form1.img }}
+		{% csrf_token%}
+		<input type="submit" value="submit">
+		</form>
+	</div>
+
+
+</body>
+
+</html>
